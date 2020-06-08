@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+		}
+
+		#quadrinho{ /*Definindo o tamanho*/
+		    width: 800px; 
+		    height: 600px;
+		}
+		#quadrinho .page{ /*Definindo os valores padrão para todas as páginas*/
+		    background-color: #FFF; /*Fundo branco porque, caso não carregue as imagens, ela não fique transparente.*/
+		    background-size: cover; /*O Fundo precisa cobrir toda a página*/
+		}
+		#quadrinho .hard{
+		    background-color: #CCC; /*Fundo cinza para diferenciar das páginas comuns*/
+		    background-size: cover;
+		}
+
+		/*Definindo as páginas que servirão de exeplo*/
+		#capa{
+			background: url("http://tableless.com.br/wp-content/uploads/2015/11/Paginas-01.png");
+		}
+		#pagina-2{
+			background: url("http://tableless.com.br/wp-content/uploads/2015/11/Paginas-02.png");
+		}
+		#pagina-3{
+			background: url("http://tableless.com.br/wp-content/uploads/2015/11/Paginas-03.png");
+		}
+		#pagina-4{
+			background: url("http://tableless.com.br/wp-content/uploads/2015/11/Paginas-04.png");
+		}
+		#pagina-5{
+			background: url("http://tableless.com.br/wp-content/uploads/2015/11/Paginas-05.png");
+		}
+		#pagina-6{
+			background: url("http://tableless.com.br/wp-content/uploads/2015/11/Paginas-06.png");
+		}
+		#pagina-7{
+			background: url("http://tableless.com.br/wp-content/uploads/2015/11/Paginas-07.png");
+		}
+		#pagina-8{
+			background: url("http://tableless.com.br/wp-content/uploads/2015/11/Paginas-08.png");
+		}
+		#pagina-9{
+			background: url("http://tableless.com.br/wp-content/uploads/2015/11/Paginas-09.png");
+		}
+	</style>
+</head>
+<body>
+	<div id="quadrinho"> <!-- Criando um novo quadrinho -->
+		<div class="hard" id="capa"></div> <!-- Criando a capa -->
+		<div class="hard">nossa</div> <!-- Criando a parte de trás da capa -->
+		<div class="page" id="pagina-2"></div> <!-- Criando as páginas -->
+		<div class="page" id="pagina-3"></div>
+		<div class="page" id="pagina-4"></div>
+		<div class="page" id="pagina-5"></div>
+		<div class="page" id="pagina-6"></div>
+		<div class="page" id="pagina-7"></div>
+		<div class="page" id="pagina-8"></div>
+		<div class="page" id="pagina-9"></div>
+		<div class="hard"></div>
+		<div class="hard"></div> <!-- Criando a contracapa -->
+	</div>
+	<script src="jquery-2.1.1.min.js"></script>
+	<script src="turn.min.js"></script>
+	<script type="text/javascript">
+		$("#quadrinho").turn({
+		    width: 800, // Para definir a largura da página
+		    height: 600, // Para definir a altura da página
+		});
+	</script>
+</body>
+</html>
